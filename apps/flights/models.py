@@ -4,7 +4,6 @@ from django.db import models
 
 from apps.aircrafts.models import Aircraft
 
-
 class Flight(models.Model):
     flight_id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Unique ID")
     flight_number = models.CharField(verbose_name='Номер рейса', max_length=100, unique=True)
